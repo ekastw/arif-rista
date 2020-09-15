@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		}
 	})
 	if ($('.owl-carousel').length>0 || $('.responsive-owl-carousel').length>0) {
-		open_script('/assets/plugins/owlcarousel/js/owl.carousel.min.js',1);
+		open_script('https://cdn.statically.io/gh/ekastw/arif-rista/6ae3eabb/owl.carousel.min.js',1);
 	}
 	function open_script(file_url,do_after){
 		$.getScript( file_url ).done(
