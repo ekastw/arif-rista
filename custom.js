@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			location.href = link_url;
 		}
 	})
-	if ($('.owl-carousel').length>0 || $('.responsive-owl-carousel').length>0) {
+	if ($('.owl-carousel').length>0) {
 		open_script('https://cdn.statically.io/gh/ekastw/arif-rista/0795593a/owl.carousel.min.js',1);
 	}if ($('[data-aos]').length>0) {
 		open_script('https://cdn.statically.io/gh/ekastw/arif-rista/0795593a/aos.min.js',2);
@@ -123,14 +123,17 @@ document.addEventListener('DOMContentLoaded', function() {
 			})
 		}if (owl_1.length>0) {
 			$( ".responsive-owl-carousel" ).each(function( index ) {
-				var min_item = 3;
+				var min_item = 3,
+					autoHeight_conf = true;
 				if ($(this).attr("min-item")) {
 					min_item = parseInt($(this).attr("min-item"));
+				}if ($(this).attr("auto-height")=="false") {
+					autoHeight_conf = false;
 				}
 				$(this).each(function( index ) {
 					$(this).owlCarousel({
 						autoWidth: false,
-						autoHeight: true,
+						autoHeight: autoHeight_conf,
 						items: 4,
 						margin:0,
 						loop:true,
@@ -162,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				$(this).each(function( index ) {
 					$(this).owlCarousel({
 						autoWidth: false,
-						autoHeight: true,
+						autoHeight: false,
 						items: 4,
 						margin:0,
 						loop:true,
