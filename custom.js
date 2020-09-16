@@ -85,17 +85,20 @@ document.addEventListener('DOMContentLoaded', function() {
 			$( ".standard-carousel" ).each(function( index ) {
 				var dot_conf = false,
 					nav_conf = false,
+					autoHeight_conf = true,
 					margin_conf = 0;
 				if ($(this).attr("dots")=="true") {
 					dot_conf = true;
 				}if ($(this).attr("nav")=="true") {
 					nav_conf = true;
-				}if ($(this).attr("margin")) {
+				}if ($(this).attr("margin")!=undefined) {
 					margin_conf = parseInt($(this).attr("margin"));
+				}if ($(this).attr("auto-height")=="false") {
+					autoHeight_conf = false;
 				}
 				$(this).owlCarousel({
 					autoWidth: false,
-					autoHeight: true,
+					autoHeight: autoHeight_conf,
 					items: 1,
 					margin:margin_conf,
 					loop:true,
