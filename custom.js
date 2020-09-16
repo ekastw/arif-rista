@@ -16,7 +16,6 @@ btn.on('click', function(e) {
 
 
 $(this).scrollTop(0);
-AOS.init();
 document.addEventListener('DOMContentLoaded', function() {
 	var win_height = $(window).innerHeight(),
 		win_width = $(window).innerWidth(),
@@ -62,13 +61,17 @@ document.addEventListener('DOMContentLoaded', function() {
 		}
 	})
 	if ($('.owl-carousel').length>0 || $('.responsive-owl-carousel').length>0) {
-		open_script('https://cdn.statically.io/gh/ekastw/arif-rista/6ae3eabb/owl.carousel.min.js',1);
+		open_script('https://cdn.statically.io/gh/ekastw/arif-rista/0795593a/owl.carousel.min.js',1);
+	}if ($('[data-aos]').length>0) {
+		open_script('https://cdn.statically.io/gh/ekastw/arif-rista/0795593a/aos.min.js',2);
 	}
 	function open_script(file_url,do_after){
 		$.getScript( file_url ).done(
 			function( script, textStatus ) {
 				if (do_after==1) {
 					owlcar();
+				}if (do_after==2) {
+					AOS.init();
 				}
 			}
 		).fail(function( jqxhr, settings, exception ) {
