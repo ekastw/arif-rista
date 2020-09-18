@@ -1,5 +1,5 @@
 setTimeout(function(){
-	$('.modal_pop_up').css({'display':'none'})
+	$('.modal_pop_up').fadeOut(1000)
 },2000)
 
 var btn = $('#scroll-to-top-button');
