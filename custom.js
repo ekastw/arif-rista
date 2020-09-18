@@ -1,3 +1,6 @@
+setTimeout(function(){
+	$('.modal_pop_up').css({'display':'none'})
+},2000)
 
 var btn = $('#scroll-to-top-button');
 
