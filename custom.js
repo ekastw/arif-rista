@@ -34,14 +34,14 @@
 function youtube_init() {
 	var vidDefer = $('iframe');
 	vidDefer.each(function( index ) {
-		if($(this).getAttribute('data-src')) {
-			$(this).setAttribute('src',$(this).getAttribute('data-src'));
+		if(this.getAttribute('data-src')) {
+			this.setAttribute('src',this.getAttribute('data-src'));
 		}
 
 	})
 }
-window.onload = youtube_init;
 window.onload  = function () {
+	youtube_init();
 	$(this).scrollTop(0);
 	if ($('.onload-mask').length>0) {
 		$('.onload-mask').fadeOut(800)
