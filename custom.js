@@ -32,8 +32,16 @@ $(this).scrollTop(0);
     };
     
 })(jQuery);
-
+function youtube_init() {
+	var vidDefer = document.getElementsByTagName('iframe');
+	for (var i=0; i<vidDefer.length; i++) {
+		if(vidDefer[i].getAttribute('yt-src')) {
+			vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('yt-src'));
+		}
+	}
+}
 window.onload  = function () {
+	youtube_init
 	if ($('.onload-mask').length>0) {
 		$('.onload-mask').fadeOut(800)
 		$('.lazy-load').loadScroll(1000);
