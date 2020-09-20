@@ -1,4 +1,3 @@
-$(this).scrollTop(0);
 (function($) {
     $.fn.loadScroll = function(duration) {
         var $window = $(window),images = this,inview,loaded;
@@ -33,15 +32,17 @@ $(this).scrollTop(0);
     
 })(jQuery);
 function youtube_init() {
-	var vidDefer = document.getElementsByTagName('iframe');
-	for (var i=0; i<vidDefer.length; i++) {
-		if(vidDefer[i].getAttribute('data-src')) {
-			vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'));
+	var vidDefer = $('iframe');
+	vidDefer.each(function( index ) {
+		if($(this).getAttribute('data-src')) {
+			$(this).setAttribute('src',$(this).getAttribute('data-src'));
 		}
-	}
+
+	})
 }
 window.onload = youtube_init;
 window.onload  = function () {
+	$(this).scrollTop(0);
 	if ($('.onload-mask').length>0) {
 		$('.onload-mask').fadeOut(800)
 		$('.lazy-load').loadScroll(1000);
