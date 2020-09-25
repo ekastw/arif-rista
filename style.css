@@ -191,7 +191,7 @@
 
 			.img-full{width: 100%}
 			html,body{margin: 0px;padding: 0px;max-width: 100%;overflow: hidden;overflow-y: auto}
-			body{font-family: 'Raleway', sans-serif;-khtml-user-select:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select: none;-o-user-select:none;user-select:none;unselectable:on}
+			body{font-family: 'Raleway', sans-serif;-khtml-user-select:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select: none;-o-user-select:none;user-select:none;unselectable:on;font-size: 1.2em}
 			p{font-size: 1.2em}
 			body.modal-pop-up{height: 100vh;overflow: none;overflow-y: hidden;}
 			body .not-launched-yet{display: none}
@@ -218,6 +218,7 @@
 			.text-left-center{text-align: left;}
 			a:hover{transition: all .4s ease;}
 			@media(max-width: 1024px){
+				body,p{font-size: 1.1em}
 				.text-left-center{text-align: center;}
 				.auto-grid{columns: 2;}
 			}
