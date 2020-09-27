@@ -191,7 +191,7 @@
 
 			.img-full{width: 100%}
 			html,body{margin: 0px;padding: 0px;max-width: 100%;overflow: hidden;overflow-y: auto}
-			body{font-family: 'Raleway', sans-serif;-khtml-user-select:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select: none;-o-user-select:none;user-select:none;unselectable:on;font-size: 1.2em}
+			body{font-family: 'Raleway', sans-serif;font-size: 1.2em}/*;-khtml-user-select:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select: none;-o-user-select:none;user-select:none;unselectable:on;*/
 			p{font-size: 1.2em}
 			body.modal-pop-up{height: 100vh;overflow: none;overflow-y: hidden;}
 			body .not-launched-yet{display: none}
